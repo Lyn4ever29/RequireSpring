@@ -1,10 +1,7 @@
 # RequireSpring笔记
 
-::: hljs-center
-
 ![jdk](https://img.shields.io/badge/jdk-1.8-green.svg)
-![Spring](https://img.shields.io/badge/jdk-1.8-green.svg)
-:::
+![Spring](https://img.shields.io/badge/Spring-5.1.10.RELEASE-green.svg)
 
 
 
