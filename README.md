@@ -14,7 +14,7 @@
 
 [使用xml配置方式式的入门级IoC和DI（seconddemo）](https://github.com/Lyn4ever29/RequireSpring/tree/master/seconddemo)
 
-### SpringAop 相关内容（完结）
+### SpringAop 相关内容（==已完结==）
 
 [AOP基础(aopdemo1)](https://github.com/Lyn4ever29/RequireSpring/tree/master/aopdemo1)
 
