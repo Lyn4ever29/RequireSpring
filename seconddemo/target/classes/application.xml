@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--这个类就是我们的实体类-->
+    <bean name="computer" class="cn.lyn4ever.spring.bean.Computer">
+    </bean>
+
+
+    <!--构造函数注入1-->
+    <bean name="computerByCon1" class="cn.lyn4ever.spring.bean.Computer">
+        <constructor-arg name="color" value="red"/>
+        <constructor-arg name="size" value="middle"/>
+    </bean>
+
+    <!--构造函数注入2,上边是利用属性的name来注入，这里是用角标的方式，本质上是一样的-->
+    <bean name="computerByCon2" class="cn.lyn4ever.spring.bean.Computer">
+        <constructor-arg index="0" value="green"/>
+        <constructor-arg index="1" value="large"/>
+    </bean>
+
+
+    <!--setter方法注入-->
+    <bean name="computerBySetter" class="cn.lyn4ever.spring.bean.Computer">
+        <property name="color" value="red"/>
+        <property name="size" value="small"/>
+        <!--这个property标签只与类中的setter()方法有关，只有写了setter方法，才能注入-->
+    </bean>
+
+</beans>

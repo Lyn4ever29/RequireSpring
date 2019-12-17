@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--注入student-->
+    <bean name="student" class="cn.lyn4ever.aop.aopconfig.Student">
+    </bean>
+
+    <!--注入teacher-->
+    <bean name="teacherOne" class="cn.lyn4ever.aop.aopconfig.Teacher">
+        <!--注意,这个student的属性要是上边的代理类,而不是能student-->
+        <!--<property name="student" ref="student"/>-->
+        <property name="student" ref="proxyOne"/>
+    </bean>
+
+    <!--注入我们创建的通知类-->
+    <bean id="advice" class="cn.lyn4ever.aop.aopconfig.AuditAdvice"></bean>
+
+    <!--创建代理类，使用前边写的通知进行通知，这样会使这个类上的所有方法都被通知-->
+    <bean name="proxyOne" class="org.springframework.aop.framework.ProxyFactoryBean" p:target-ref="student"
+          p:interceptorNames-ref="interceptorNames">
+        <!--因为interceptorNames的属性是一个可变参数,也就是一个list-->
+    </bean>
+
+    <!--在上边引入了util的名称空间,简化了书写-->
+    <util:list id="interceptorNames">
+        <value>advice</value>
+    </util:list>
+
+
+    <!--以下是使用切入点的方式来进行通知,上边的代码和上一个配置文件一样,没有修改-->
+    <!--sutdent基本bean,我们继续使用-->
+
+    <bean name="teacherTwo" p:student-ref="proxyTwo" class="cn.lyn4ever.aop.aopconfig.Teacher"/>
+
+    <bean id="proxyTwo" class="org.springframework.aop.framework.ProxyFactoryBean"
+          p:target-ref="student" p:interceptorNames-ref="interceptorAdvisorNames">
+    </bean>
+
+    <util:list id="interceptorAdvisorNames">
+        <value>advisor</value>
+    </util:list>
+
+    <!--配置切入点bean-->
+    <bean id="advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor"
+          p:advice-ref="advice">
+        <property name="pointcut">
+            <!--这个切入点我们用了一个匿名bean来写aspectJ的表达式,当然也可以用其他的类型切入点,这个在上边链接中能看到-->
+            <bean class="org.springframework.aop.aspectj.AspectJExpressionPointcut"
+                  p:expression="execution(* talk*(..))"/>
+        </property>
+
+    </bean>
+
+</beans>

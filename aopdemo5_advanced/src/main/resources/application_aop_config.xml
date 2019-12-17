@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+  ">
+
+    <!--通过普通的方式来注入三个bean-->
+    <!--注入student-->
+    <bean name="student" class="cn.lyn4ever.aop.aopconfig.Student"/>
+    <!--注入teacher-->
+    <bean name="teacher" class="cn.lyn4ever.aop.aopconfig.Teacher">
+        <property name="student" ref="student"/>
+    </bean>
+    <!--注入我们创建的通知类-->
+    <bean id="advice" class="cn.lyn4ever.aop.proxyfactory.BeforeAdvice"/>
+
+
+    <aop:config>
+        <aop:pointcut id="talkExecution" expression="execution(* talk*(..))"/>
+        <aop:aspect ref="advice">
+            <!--这个方法就是我们在自定义通知类中之写的方法-->
+            <aop:before method="beforeSaySomething" pointcut-ref="talkExecution"/>
+            <!--当然,还可以配置其他通知类型-->
+        </aop:aspect>
+    </aop:config>
+
+
+
+</beans>
