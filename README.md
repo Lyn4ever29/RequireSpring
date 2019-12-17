@@ -22,5 +22,6 @@
 
 [SpringAOP之使用切入点创建通知](https://github.com/Lyn4ever29/RequireSpring/tree/master/aopdemo3_pointcut)
 
-[SpringAOP中切入点的高级使用](https://github.com/Lyn4ever29/RequireSpring/tree/master/aopdemo4_advanced)
+[SpringAOP中切入点的高级使用（aopdemo4_advanced）](https://github.com/Lyn4ever29/RequireSpring/tree/master/aopdemo4_advanced)
 
+[AOP在开发中常用的方式（aopdemo5_advanced）](https://github.com/Lyn4ever29/RequireSpring/tree/master/aopdemo5_advanced)
