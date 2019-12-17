@@ -1,14 +1,9 @@
 # RequireSpring笔记
 ::: hljs-center
 
-![jdk](https://img.shields.io/badge/jdk-1.8-brintgreen.svg)  ![Spring](https://img.shields.io/badge/Spring-5.1.10.RELEASE-green.svg)
+![jdk](https://img.shields.io/badge/jdk-1.8-brintgreen.svg)   ![Spring](https://img.shields.io/badge/Spring-5.1.10.RELEASE-red.svg)
 
 :::
-
-
-
-
-
 ### Spring基础知识
 [使用Spring创建第一个类（firstdemo）](https://github.com/Lyn4ever29/RequireSpring/tree/master/firstdemo)
 
