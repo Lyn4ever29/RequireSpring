@@ -3,8 +3,11 @@
 
 ![jdk](https://img.shields.io/badge/jdk-1.8-brintgreen.svg)   ![Spring](https://img.shields.io/badge/Spring-5.1.10.RELEASE-red.svg)
 
-
 </center>
+
+### 前言
+整个项目是一个大大的maven项目，所有的依赖都加入到了最外层的pom文件中，里边的小项目全部以这个项目为父项目，所以不再对依赖进行单独引入
+[查看所有依赖](https://github.com/Lyn4ever29/RequireSpring/blob/master/pom.xml)
 
 ### Spring基础知识
 [使用Spring创建第一个类（firstdemo）](https://github.com/Lyn4ever29/RequireSpring/tree/master/firstdemo)
