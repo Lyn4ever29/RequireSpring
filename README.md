@@ -26,5 +26,9 @@
 
 [AOP在开发中常用的方式（aopdemo5_advanced）](https://github.com/Lyn4ever29/RequireSpring/tree/master/aopdemo5_advanced)
 
+### SpringJdbc系列内容(持续更新)
+
+[在Spring中使用嵌入式数据库-h2]()
+
 ###	我的博客
 [小鱼吃猫的博客](https://www.cnblogs.com/Lyn4ever/)
