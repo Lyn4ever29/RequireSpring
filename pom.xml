@@ -56,7 +56,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>5.1.10.RELEASE</version>
+            <version>5.2.0.RELEASE</version>
         </dependency>
         <!-- 4.Spring test依赖：方便做单元测试和集成测试 -->
         <dependency>
