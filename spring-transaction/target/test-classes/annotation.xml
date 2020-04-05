@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <import resource="application-context.xml"/>
+
+    <!--Spring提供的事务管理器-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+
+    <!--
+    开启事务注解
+    这里有个小技巧，如果你的事务管理bean名不是transactionManager
+    就要给这个标签配置transaction-manager来指定
+    -->
+    <tx:annotation-driven/>
+
+    <!--    配置spring扫描注解注入service类-->
+    <context:component-scan base-package="cn.lyn4ever.service"/>
+
+</beans>
