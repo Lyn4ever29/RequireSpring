@@ -17,6 +17,8 @@
         <module>aopdemo4_advanced</module>
         <module>aopdemo5_advanced</module>
         <module>h2database</module>
+        <module>source_code_IOC_1</module>
+        <module>spring-transaction</module>
     </modules>
 
     <dependencies>
@@ -94,6 +96,13 @@
             <artifactId>aspectjweaver</artifactId>
             <version>1.9.1</version>
         </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+
     </dependencies>
 
 </project>

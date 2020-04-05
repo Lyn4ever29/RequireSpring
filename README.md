@@ -30,5 +30,7 @@
 
 [在Spring中使用嵌入式数据库-h2]()
 
+[使用Spring与数据库事务](https://github.com/Lyn4ever29/RequireSpring/tree/master/spring-transaction)
+
 ###	我的博客
 [小鱼吃猫的博客](https://www.cnblogs.com/Lyn4ever/)
