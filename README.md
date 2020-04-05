@@ -28,7 +28,7 @@
 
 ### SpringJdbc系列内容(持续更新)
 
-[在Spring中使用嵌入式数据库-h2]()
+[在Spring中使用嵌入式数据库-h2](https://github.com/Lyn4ever29/RequireSpring/tree/master/h2database)
 
 [使用Spring与数据库事务](https://github.com/Lyn4ever29/RequireSpring/tree/master/spring-transaction)
 
