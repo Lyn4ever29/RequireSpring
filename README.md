@@ -26,11 +26,20 @@
 
 [AOP在开发中常用的方式（aopdemo5_advanced）](https://github.com/Lyn4ever29/RequireSpring/tree/master/aopdemo5_advanced)
 
+[在SpringBoot中使用AOP](https://github.com/Lyn4ever29/springboot-learn)
+
 ### SpringJdbc系列内容(持续更新)
 
 [在Spring中使用嵌入式数据库-h2](https://github.com/Lyn4ever29/RequireSpring/tree/master/h2database)
 
 [使用Spring与数据库事务](https://github.com/Lyn4ever29/RequireSpring/tree/master/spring-transaction)
 
+### SpringBoot学习教程
+[SpringBoot学习](https://github.com/Lyn4ever29/springboot-learn)
+
 ###	我的博客
 [小鱼吃猫的博客](https://www.cnblogs.com/Lyn4ever/)
+
+### 关注我的微信公众号
+![](https://lyn4ever.gitee.io/img/wx/gzh2.png)
+
